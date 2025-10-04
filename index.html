@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏠 Property ROI Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h1>🏠 Property ROI Tracker (PWA)</h1>
+
+    <form id="propertyForm">
+      <label>Property Name</label>
+      <input type="text" id="property_name" required>
+
+      <label>Purchase Price (AED)</label>
+      <input type="number" id="purchase_price" required>
+
+      <label>Year</label>
+      <input type="number" id="year" required>
+
+      <label>Start Date</label>
+      <input type="date" id="start_date" required>
+
+      <label>End Date</label>
+      <input type="date" id="end_date" required>
+
+      <label>Annual Rent (AED)</label>
+      <input type="number" id="annual_rent" required>
+
+      <label>Annual Expenses (AED)</label>
+      <input type="number" id="annual_expenses" required>
+
+      <label>Notes</label>
+      <textarea id="notes" placeholder="Optional notes..."></textarea>
+
+      <button type="submit">Save Property</button>
+    </form>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
