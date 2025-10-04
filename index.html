@@ -8,38 +8,56 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <div class="header">
+    <div class="summary">
+      <div><span id="totalRent">AED 0</span><br><small>Total Rent</small></div>
+      <div><span id="avgROI">0%</span><br><small>Avg Net ROI</small></div>
+    </div>
+  </div>
+
   <div class="container">
-    <h1>🏠 Property ROI Tracker (PWA)</h1>
+    <h2>My Properties</h2>
+    <div id="propertyList"></div>
+  </div>
 
-    <form id="propertyForm">
-      <label>Property Name</label>
-      <input type="text" id="property_name" required>
+  <!-- Floating Add Button -->
+  <button class="add-btn" id="openModal">＋</button>
 
-      <label>Purchase Price (AED)</label>
-      <input type="number" id="purchase_price" required>
+  <!-- Modal Popup -->
+  <div class="modal" id="propertyModal">
+    <div class="modal-content">
+      <h3>Add Property</h3>
+      <form id="propertyForm">
+        <label>Property Name</label>
+        <input type="text" id="property_name" required>
 
-      <label>Year</label>
-      <input type="number" id="year" required>
+        <label>Purchase Price (AED)</label>
+        <input type="number" id="purchase_price" required>
 
-      <label>Start Date</label>
-      <input type="date" id="start_date" required>
+        <label>Year</label>
+        <input type="number" id="year" required>
 
-      <label>End Date</label>
-      <input type="date" id="end_date" required>
+        <label>Start Date</label>
+        <input type="date" id="start_date" required>
 
-      <label>Annual Rent (AED)</label>
-      <input type="number" id="annual_rent" required>
+        <label>End Date</label>
+        <input type="date" id="end_date" required>
 
-      <label>Annual Expenses (AED)</label>
-      <input type="number" id="annual_expenses" required>
+        <label>Annual Rent (AED)</label>
+        <input type="number" id="annual_rent" required>
 
-      <label>Notes</label>
-      <textarea id="notes" placeholder="Optional notes..."></textarea>
+        <label>Annual Expenses (AED)</label>
+        <input type="number" id="annual_expenses" required>
 
-      <button type="submit">Save Property</button>
-    </form>
+        <label>Notes</label>
+        <textarea id="notes" placeholder="Optional"></textarea>
 
-    <div id="results"></div>
+        <div class="modal-actions">
+          <button type="button" id="closeModal" class="cancel-btn">Cancel</button>
+          <button type="submit" class="save-btn">Save</button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script src="app.js"></script>
